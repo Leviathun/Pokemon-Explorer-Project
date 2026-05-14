@@ -1,17 +1,10 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import { useMessageStore } from '@/stores/message'
-import { storeToRefs } from 'pinia'
-const store = useMessageStore()
-const { message } = storeToRefs(store)
 </script>
 
 <template>
   <div id="layout">
     <header class="site-header">
-      <div id="flashMessage" v-if="message">
-       <h4>{{ message }}</h4>
-      </div>
       <div class="wrapper">
         <nav>
           <RouterLink :to="{ name: 'pokemon-list-view' }">Pokemon</RouterLink>
@@ -68,20 +61,6 @@ nav a.router-link-exact-active {
 }
 
 h2 {
-  font-size: 20px
-}
-
-@keyframes yellofade {
-  from {
-    background-color: yellow;
-  }
-  to {
-    background-color: transparent;
-  }
-}
-
-#flashMessage {
-  animation: yellofade 3s ease-in-out;
-  text-align: center;
+  font-size: 20px;
 }
 </style>

@@ -54,10 +54,6 @@ export interface Pokemon {
   stats: PokemonStatSlot[]
 }
 
-export interface MessageState {
-  message: string
-}
-
 export interface PokemonState {
   pokemon: Pokemon | null
 }
