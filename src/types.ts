@@ -58,6 +58,6 @@ export interface MessageState {
   message: string
 }
 
-export interface EventState {
-  event: Pokemon | null
+export interface PokemonState {
+  pokemon: Pokemon | null
 }
