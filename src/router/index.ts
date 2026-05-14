@@ -9,7 +9,7 @@ import LayoutView from '@/views/event/LayoutView.vue'
 import PageNotFoundView from '@/views/PageNotFound.vue'
 import ResourceNotFound from '@/views/ResourceNotFound.vue'
 import nProgress from 'nprogress'
-import PassService from '@/services/PassService'
+import PokemonService from '@/services/PokemonService'
 import { useEventStore } from '@/stores/event'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,12 +29,10 @@ const router = createRouter({
       component: LayoutView,
       props: true,
       beforeEnter: (to) => {
-        // put API call here
         const id = (to.params.id as string)
         const eventStore = useEventStore()
-        return PassService.getEvent(id)
+        return PokemonService.getPokemon(id)
         .then ((response) => {
-          // need to setup the data for the event
           eventStore.setEvent(response.data)
         }) 
         .catch((error) => {

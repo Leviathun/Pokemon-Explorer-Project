@@ -1,14 +1,14 @@
 <script setup lang="ts">
 
-import { type Passen } from '@/types' 
+import { type PokemonListItem } from '@/types' 
 defineProps<{
-  event: Passen
+  event: PokemonListItem
 }>()
 
 </script>
 
 <template>
-  <RouterLink class="event-link" :to="{ name: 'event-detail-view', params: { id: event._id }}">
+  <RouterLink class="event-link" :to="{ name: 'event-detail-view', params: { id: event.name }}">
     <div class="event-card">
       <h2>{{ event.name }}</h2>
     </div>
