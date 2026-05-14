@@ -1,38 +1,32 @@
-# airline
+# Pokemon Explorer
 
-This template should help get you started developing with Vue 3 in Vite.
+Pokemon Explorer is a small learning project built with Vue 3, TypeScript, Vite, Pinia, Vue Router, and the PokeAPI.
 
-## Recommended IDE Setup
+The main purpose of this project is to practice connecting a frontend application to an external API while learning Vue and TypeScript in a practical way.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+This project was reworked from an earlier university project named **Component-Passender-of-airline-Project**. The original version used an airline/passenger API, but that API is no longer reliable, so the project was adapted into a Pokemon explorer while keeping the learning goals intact.
 
 ## Project Setup
+
+Install dependencies:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+Compile and hot-reload for development:
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Type-check, compile, and minify for production:
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+Lint the project:
 
 ```sh
 npm run lint
