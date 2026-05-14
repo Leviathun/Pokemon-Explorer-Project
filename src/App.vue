@@ -8,14 +8,14 @@ const { message } = storeToRefs(store)
 
 <template>
   <div id="layout">
-    <header>
+    <header class="site-header">
       <div id="flashMessage" v-if="message">
        <h4>{{ message }}</h4>
       </div>
       <div class="wrapper">
         <nav>
-          <RouterLink :to="{ name: 'event-list-view' }">Pokemon</RouterLink> |
-          <RouterLink :to="{ name: 'about' }">About</RouterLink> 
+          <RouterLink :to="{ name: 'pokemon-list-view' }">Pokemon</RouterLink>
+          <RouterLink :to="{ name: 'about' }">About</RouterLink>
         </nav>
       </div>
     </header>
@@ -26,24 +26,45 @@ const { message } = storeToRefs(store)
 
 <style>
 #layout {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: 2c3e50;
+  color: #24313d;
+}
+
+.site-header {
+  border-bottom: 1px solid rgba(36, 49, 61, 0.1);
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(14px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 16px 24px;
 }
 
 nav {
-  padding: 30px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #4d5b66;
+  border-radius: 999px;
+  padding: 8px 14px;
+  text-decoration: none;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #1b3c73;
+  background: #e9f1ff;
 }
 
 h2 {
@@ -61,5 +82,6 @@ h2 {
 
 #flashMessage {
   animation: yellofade 3s ease-in-out;
+  text-align: center;
 }
 </style>
