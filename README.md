@@ -45,4 +45,4 @@ Due to the unreliability of the original airline API, I made the strategic decis
 * **Lint Code:** `npm run lint`
 
 ---
-*Developed as an educational project to enhance software engineering and game development skills.*
+*Developed as an educational project to enhance software engineering and front-end development skills.*
