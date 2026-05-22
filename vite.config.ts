@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: process.env.GITHUB_PAGES ? '/Component-Passender-of-airline-Project/' : '/',
   plugins: [
     vue(),
     vueDevTools(),
